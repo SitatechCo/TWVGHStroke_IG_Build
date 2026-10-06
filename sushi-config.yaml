@@ -1,0 +1,27 @@
+# 完整設定說明：https://fshschool.org/docs/sushi/configuration/
+# 修改 id 時須同步更新 ig.ini。
+id: tw.vgh.stroke
+canonical: http://vgh-stroke-ig.fhir.tw
+name: TWVGHStrokeIG
+title: 臺灣榮總腦中風實作指引（TW VGH Stroke IG）
+description: 臺灣腦中風資料交換實作指引。
+status: draft # draft | active | retired | unknown
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+# language: zh-TW  # 暫不設定，避免 tx.fhir.org 以中文驗證 SNOMED CT display 導致大量誤判
+publisher:
+  name: 高雄榮民總醫院 (VGHKS)
+  url: https://www.vghks.gov.tw/
+  # email: contact@example.org
+
+dependencies:
+  tw.gov.mohw.twcore: 1.0.0
+
+parameters:
+  generate: example-narratives
+  generate-version: r4
+  version-comparison: none
+
+# 選單由 input/includes/menu.xml 管理，請勿在此設定 menu。
