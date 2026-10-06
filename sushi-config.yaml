@@ -9,6 +9,7 @@ status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2026+
+license: CC-BY-NC-ND-4.0 # https://creativecommons.org/licenses/by-nc-nd/4.0/
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # language: zh-TW  # 暫不設定，避免 tx.fhir.org 以中文驗證 SNOMED CT display 導致大量誤判
 publisher:

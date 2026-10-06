@@ -35,7 +35,11 @@ Windows 使用 `.bat` 版本，持續建置使用 `_gencontinuous.sh`。
 |------|------|
 | Canonical URL | `http://vgh-stroke-ig.fhir.tw` |
 | Package ID | `tw.vgh.stroke` |
-| 發布單位 | 高雄榮民總醫院 (VGHKS) |
+| 發布單位 | 高雄榮民總醫院 (Kaohsiung Veterans General Hospital, KSVGH) |
 | 版本 | 0.1.0 |
 | FHIR 版本 | R4.0.1 |
 | 上層依賴 | TW Core IG 1.0.0 |
+
+## 授權
+
+本專案內容以 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.zh-hant)（姓名標示─非商業性─禁止改作 4.0 國際）授權條款釋出，詳見 [LICENSE](LICENSE)。
