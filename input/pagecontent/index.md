@@ -87,14 +87,14 @@
     <tr>
       <td style="vertical-align: middle;">貢獻者</td>
       <td style="vertical-align: middle;">0.1.0</td>
-      <td style="vertical-align: middle;">陳靖勳（Jing-Syun Chen）</td>
+      <td style="vertical-align: middle;">陳靖勳（Jing-Shiun Chen）</td>
       <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />（Sitatech Information Services Co., Ltd）</td>
       <td style="vertical-align: middle;"><a href="mailto:pt@sita.tech">pt@sita.tech</a></td>
     </tr>
     <tr>
       <td style="vertical-align: middle;">貢獻者</td>
       <td style="vertical-align: middle;">0.1.0</td>
-      <td style="vertical-align: middle;">張士宏（Shih-Hong Jhang）</td>
+      <td style="vertical-align: middle;">張士宏（Shih-Hung Jhang）</td>
       <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />（Sitatech Information Services Co., Ltd）</td>
       <td style="vertical-align: middle;"><a href="mailto:kevin0216@sita.tech">kevin0216@sita.tech</a></td>
     </tr>
