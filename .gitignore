@@ -17,3 +17,6 @@ full-ig.zip
 
 # IG Publisher 自 narrative 彙整產生的 Requirements 資源（建置產物）
 /Requirements-fromNarrative.json
+
+# 本機工具設定（Codex MCP 等）
+/.codex/
