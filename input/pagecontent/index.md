@@ -60,6 +60,7 @@
     </ul>
   </li>
   <li><strong><a href="examples.html">範例</a></strong>：TW VGH Stroke IG 的所有範例，依 Profile 分類列出。</li>
+  <li><strong><a href="downloads.html">結構定義與範例檔下載</a></strong>：下載完整 IG、NPM Package、規範文件定義、值集展開、範例、試算表與 Schematron。</li>
 </ul>
 </div>
 

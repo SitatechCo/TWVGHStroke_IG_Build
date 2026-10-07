@@ -37,6 +37,8 @@ pages:
     title: 專門術語
   examples.md:
     title: 範例
+  downloads.md:
+    title: 結構定義與範例檔下載
   ImplementationGuide-tw.vgh.stroke.md:
     title: 實作指引資訊
 

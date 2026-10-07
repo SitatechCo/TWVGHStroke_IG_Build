@@ -5,79 +5,90 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6A00F4;strokeColor=#6A00F4;fontColor=#FFFFFF;fontStyle=1;fontSize=20;arcSize=12;" value="臺灣榮總腦中風實作指引&lt;br&gt;(TW VGH Stroke IG)" vertex="1">
-          <mxGeometry height="80" width="340" x="225" y="20" as="geometry" />
+          <mxGeometry height="80" width="340" x="245" y="20" as="geometry" />
         </mxCell>
         <mxCell id="n1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6A00F4;strokeColor=#6A00F4;fontColor=#FFFFFF;fontStyle=1;fontSize=18;arcSize=12;" value="應用說明" vertex="1">
-          <mxGeometry height="60" width="140" x="40" y="170" as="geometry" />
+          <mxGeometry height="60" width="150" x="0" y="170" as="geometry" />
         </mxCell>
         <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6A00F4;strokeColor=#6A00F4;fontColor=#FFFFFF;fontStyle=1;fontSize=18;arcSize=12;" value="目錄" vertex="1">
-          <mxGeometry height="60" width="140" x="230" y="170" as="geometry" />
+          <mxGeometry height="60" width="150" x="170" y="170" as="geometry" />
         </mxCell>
         <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6A00F4;strokeColor=#6A00F4;fontColor=#FFFFFF;fontStyle=1;fontSize=18;arcSize=12;" value="規範文件" vertex="1">
-          <mxGeometry height="60" width="140" x="420" y="170" as="geometry" />
+          <mxGeometry height="60" width="150" x="340" y="170" as="geometry" />
         </mxCell>
         <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6A00F4;strokeColor=#6A00F4;fontColor=#FFFFFF;fontStyle=1;fontSize=18;arcSize=12;" value="範例" vertex="1">
-          <mxGeometry height="60" width="140" x="610" y="170" as="geometry" />
+          <mxGeometry height="60" width="150" x="510" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6A00F4;strokeColor=#6A00F4;fontColor=#FFFFFF;fontStyle=1;fontSize=16;arcSize=12;" value="結構定義與&lt;br&gt;範例檔下載" vertex="1">
+          <mxGeometry height="60" width="150" x="680" y="170" as="geometry" />
         </mxCell>
         <mxCell id="c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=16;align=left;spacingLeft=12;arcSize=12;" value="邏輯模型" vertex="1">
-          <mxGeometry height="40" width="250" x="490" y="262" as="geometry" />
+          <mxGeometry height="40" width="250" x="410" y="262" as="geometry" />
         </mxCell>
         <mxCell id="c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=16;align=left;spacingLeft=12;arcSize=12;" value="FHIR Profiles 及 Extensions" vertex="1">
-          <mxGeometry height="40" width="250" x="490" y="312" as="geometry" />
+          <mxGeometry height="40" width="250" x="410" y="312" as="geometry" />
         </mxCell>
         <mxCell id="c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=16;align=left;spacingLeft=12;arcSize=12;" value="專門術語" vertex="1">
-          <mxGeometry height="40" width="250" x="490" y="362" as="geometry" />
+          <mxGeometry height="40" width="250" x="410" y="362" as="geometry" />
         </mxCell>
         <mxCell id="e1" edge="1" parent="1" source="title" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#000000;" target="n1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="395" y="135" />
-              <mxPoint x="110" y="135" />
+              <mxPoint x="415" y="135" />
+              <mxPoint x="75" y="135" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e2" edge="1" parent="1" source="title" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#000000;" target="n2">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="395" y="135" />
-              <mxPoint x="300" y="135" />
+              <mxPoint x="415" y="135" />
+              <mxPoint x="245" y="135" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e3" edge="1" parent="1" source="title" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#000000;" target="n3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="395" y="135" />
-              <mxPoint x="490" y="135" />
+              <mxPoint x="415" y="135" />
+              <mxPoint x="415" y="135" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e4" edge="1" parent="1" source="title" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#000000;" target="n4">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="395" y="135" />
-              <mxPoint x="680" y="135" />
+              <mxPoint x="415" y="135" />
+              <mxPoint x="585" y="135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="title" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#000000;" target="n5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="415" y="135" />
+              <mxPoint x="755" y="135" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e5" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.25;exitY=1;entryX=0;entryY=0.5;endArrow=none;strokeColor=#000000;" target="c1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="455" y="282" />
+              <mxPoint x="377.5" y="282" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e6" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.25;exitY=1;entryX=0;entryY=0.5;endArrow=none;strokeColor=#000000;" target="c2">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="455" y="332" />
+              <mxPoint x="377.5" y="332" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e7" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.25;exitY=1;entryX=0;entryY=0.5;endArrow=none;strokeColor=#000000;" target="c3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="455" y="382" />
+              <mxPoint x="377.5" y="382" />
             </Array>
           </mxGeometry>
         </mxCell>
