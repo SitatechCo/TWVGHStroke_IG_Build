@@ -14,22 +14,22 @@
 - [XML](ImplementationGuide-tw.vgh.stroke.xml)
 - [JSON](ImplementationGuide-tw.vgh.stroke.json)
 
-#### Cross Version Analysis
+### Cross Version Analysis
 
 {% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}
 
-#### IG Dependencies
+### IG Dependencies
 
 This IG Contains the following dependencies on other IGs.
 
 {% capture dependencies %}{% include dependency-table.xhtml %}{% endcapture %}
 {{ dependencies | replace: '<table border="0"', '<table class="grid rwd-table" border="0"' }}
 
-#### Global Profiles
+### Global Profiles
 
 {% include globals-table.xhtml %}
 
-#### Copyrights
+### Copyrights
 
 {% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
 

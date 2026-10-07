@@ -31,3 +31,16 @@ The definition for the element 'ImagingStudy.series.performer.function' binds to
 
 # TW Core MedicationStatement-twcore 父層 medication[x] 標 MS，但 medicationReference Slice 未標，為父層固有不一致，衍生 Profile 無法修正。
 The slice 'medicationReference' on path 'MedicationStatement.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+
+# R4 MedicationStatement.medication[x] 原有 example 綁定，TW Core 依型別切出 Slice 後一併繼承，衍生 Profile 無法移除。本 IG 以 stroke-medstmt-2 限定只用 medicationCodeableConcept。
+The Binding on the type slicer MedicationStatement.medication[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for Reference
+
+# fhir.base.template 內建的 searchform.html 標籤未正確關閉，屬範本問題，本 IG 無法修改。
+The html source is not well formed: Found "</a>" expecting "</img>" at line 34 column 177
+The html source is not well formed: Found "</div>" expecting "</body>" at line 79 column 10
+The html source is not well formed: Found "</div>" expecting "</body>" at line 80 column 9
+The html source is not well formed: Found "</div>" expecting "</body>" at line 109 column 8
+The html source is not well formed: Found "</div>" expecting "</body>" at line 111 column 12
+The html source is not well formed: Found "</div>" expecting "</body>" at line 112 column 20
+The html source is not well formed: Found "</div>" expecting "</body>" at line 113 column 16
+The html source is not well formed: Found "</div>" expecting "</body>" at line 115 column 12
