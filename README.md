@@ -6,6 +6,7 @@
 
 | 路徑 | 說明 |
 |------|------|
+| `input/fsh/logicals/` | Logical Models（三個資料來源） |
 | `input/fsh/profiles/` | Profiles |
 | `input/fsh/extensions/` | Extensions |
 | `input/fsh/codesystems/` | CodeSystems |

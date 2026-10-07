@@ -24,5 +24,20 @@ parameters:
   generate: example-narratives
   generate-version: r4
   version-comparison: none
+  pin-canonicals: pin-multiples
+
+pages:
+  index.md:
+    title: 應用說明
+  logical-models.md:
+    title: 邏輯模型
+  profiles-and-extensions.md:
+    title: FHIR Profiles 及 Extensions
+  terminologies.md:
+    title: 專門術語
+  examples.md:
+    title: 範例
+  ImplementationGuide-tw.vgh.stroke.md:
+    title: 實作指引資訊
 
 # 選單由 input/includes/menu.xml 管理，請勿在此設定 menu。

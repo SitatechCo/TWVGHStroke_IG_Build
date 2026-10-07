@@ -4,7 +4,7 @@
 
 This repository defines the Taiwan VGH Stroke FHIR R4 Implementation Guide using FHIR Shorthand (FSH).
 
-- `input/fsh/`: `profiles/`, `extensions/`, `codesystems/`, `valuesets/`, `examples/`, and shared `aliases.fsh`.
+- `input/fsh/`: `logicals/`, `profiles/`, `extensions/`, `codesystems/`, `valuesets/`, `examples/`, and shared `aliases.fsh`.
 - `input/pagecontent/`: authored Markdown pages; `input/images/` and `input/includes/`: assets and navigation.
 - `sushi-config.yaml`: IG metadata and dependencies; `ig.ini`: Publisher configuration.
 - `fsh-generated/` and `output/`: build outputs; do not edit by hand.
@@ -21,7 +21,7 @@ Publisher updates must preserve this repository's build scripts so the required 
 
 ## Coding Style & Naming Conventions
 
-Follow adjacent FSH files: top-level `*` rules and four-space indentation for multiline Slice declarations. Use names such as `profile_*.fsh`, `ext_*.fsh`, `cs_*.fsh`, `vs_*.fsh`, and `example_*.fsh`. Reuse aliases and existing canonical identifiers. Write titles and descriptions in Traditional Chinese. No dedicated formatter is configured.
+Follow adjacent FSH files: top-level `*` rules and four-space indentation for multiline Slice declarations. Use names such as `lm_*.fsh`, `profile_*.fsh`, `ext_*.fsh`, `cs_*.fsh`, `vs_*.fsh`, and `example_*.fsh`. Reuse aliases and existing canonical identifiers. Write titles and descriptions in Traditional Chinese. In Markdown pages, add `{: .grid .rwd-table}` after every table so it renders with borders. No dedicated formatter is configured.
 
 ## Description Writing Principles
 

@@ -1,5 +1,30 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li><a href="index.html">首頁</a></li>
+  <li><a href="index.html">應用說明</a></li>
   <li><a href="toc.html">目錄</a></li>
-  <li><a href="artifacts.html">規範文件</a></li>
+  <li class="dropdown">
+    <a href="artifacts.html">規範文件<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">所有規範文件</a></li>
+      <li><a href="logical-models.html">邏輯模型</a></li>
+      <li><a href="profiles-and-extensions.html">FHIR Profiles 及 Extensions</a></li>
+      <li><a href="terminologies.html">專門術語</a></li>
+    </ul>
+  </li>
+  <li><a href="examples.html">範例</a></li>
 </ul>
+
+<style>
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {display: block;}
+
+/* 表格在窄螢幕時可水平捲動 */
+@media only screen and (max-width: 992px) {
+  table.rwd-table,
+  table.colsi {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+</style>

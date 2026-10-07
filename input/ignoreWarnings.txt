@@ -1,3 +1,33 @@
 == Suppressed Messages ==
 
-# 僅在調查確認後，針對具體訊息加入有充分理由的抑制，並附上說明。
+# 來源三個系統都沒有記錄評估者或測量者，不可捏造 performer。
+Best Practice Recommendation: In general, all observations should have a performer
+
+# 部分範例刻意示範來源沒有評估日期的情況（例如中風前 mRS、未記錄日期的併發症），依規格不得以登錄或匯入時間代填 effective[x]。
+Best Practice Recommendation: In general, all observations should have an effective[x] ()
+
+# 吸菸量單位依院方規格使用 UCUM {cigarette}/d。
+UCUM Codes that contain human readable annotations like {cigarette} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+
+# 以下 identifier.system／policy URL 為暫定網址，待院方核定正式 system 後更新。
+No definition could be found for URL value 'http://www.vghks.gov.tw/patient-id'
+No definition could be found for URL value 'http://www.vghks.gov.tw/stroke-hospital-code'
+No definition could be found for URL value 'http://www.vghks.gov.tw/staff-id'
+No definition could be found for URL value 'http://www.vghks.gov.tw/stroke-registry-record'
+No definition could be found for URL value 'http://www.vghks.gov.tw/evt-registry-id'
+No definition could be found for URL value 'http://www.vghks.gov.tw/stroke-registry/consent-policy'
+No definition could be found for URL value 'http://www.vghks.gov.tw/order-id'
+No definition could be found for URL value 'http://www.vghks.gov.tw/stroke-case-management-serial'
+No definition could be found for URL value 'http://www.vghks.gov.tw/rapid-record-key'
+
+# 院內檢查項目代碼系統為暫定網址，院方核定正式代碼表前無法驗證。
+A definition for CodeSystem 'http://www.vghks.gov.tw/exam-item-code' could not be found, so the code cannot be validated
+
+# 繼承自 TW Core 1.0.0 ImagingStudy-twcore 的綁定，本 IG 無法修改。
+ValueSet 'http://www.rsna.org/RadLex_Playbook.aspx' not found
+A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
+A definition could not be found for Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1'
+The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function' which is experimental, but this structure is not labeled as experimental
+
+# TW Core MedicationStatement-twcore 父層 medication[x] 標 MS，但 medicationReference Slice 未標，為父層固有不一致，衍生 Profile 無法修正。
+The slice 'medicationReference' on path 'MedicationStatement.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
