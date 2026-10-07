@@ -1,0 +1,18 @@
+{
+  "package-id" : "tw.vgh.stroke",
+  "version" : "0.1.0",
+  "path" : "http://vgh-stroke-ig.fhir.tw/0.1.0",
+  "mode" : "milestone",
+  "status" : "draft",
+  "sequence" : "Releases",
+  "desc" : "第一個發佈版本",
+  "descmd" : "第一個發佈版本：個管系統、EVT 登錄與 RAPID 三個資料來源的邏輯模型、Profiles、Extensions、術語與個案資料包 Bundle。",
+  "first" : true,
+  "title" : "臺灣榮總腦中風實作指引（TW VGH Stroke IG）",
+  "ci-build" : "http://build.fhir.org/ig/SitatechCo/TWVGHStroke_IG_Build",
+  "category" : "Clinical Registries",
+  "introduction" : "臺灣榮總腦中風實作指引（Taiwan VGH Stroke Implementation Guide，TW VGH Stroke IG），定義腦中風個管系統、EVT 登錄與 RAPID 影像分析資料的 FHIR 交換格式。",
+  "registry-description" : "Taiwan VGH stroke registry data exchange: case management, EVT registry and RAPID imaging",
+  "registry-country" : "tw",
+  "registry-authority" : "VGHKS (TW)"
+}
