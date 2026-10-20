@@ -1,10 +1,9 @@
 Instance: stroke-nihss-admission-example
 InstanceOf: StrokeNIHSS
 Title: "腦中風 NIHSS 入院評估範例"
-Description: "入院 NIHSS 評估包含 15 個分項與總分，來源評估序號填 1。"
+Description: "EVT 登錄最初進院 NIHSS 評估，包含 15 個分項與總分，評估時點填 admission。"
 Usage: #example
 * extension[assessmentPhase].valueCode = #admission
-* extension[assessmentSequence].valuePositiveInt = 1
 * status = #final
 * category[survey] = $ObsCategory#survey "Survey"
 * code = $LOINC#72089-6 "Total score [NIH Stroke Scale]"

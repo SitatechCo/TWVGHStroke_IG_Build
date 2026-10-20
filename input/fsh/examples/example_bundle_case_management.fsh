@@ -78,8 +78,8 @@ Usage: #example
 * entry[nihss][1].resource = stroke-nihss-24h-example
 * entry[mrs][0].fullUrl = "http://vgh-stroke-ig.fhir.tw/Observation/stroke-mrs-discharge-example"
 * entry[mrs][0].resource = stroke-mrs-discharge-example
-* entry[mrs][1].fullUrl = "http://vgh-stroke-ig.fhir.tw/Observation/stroke-mrs-unclassified-example"
-* entry[mrs][1].resource = stroke-mrs-unclassified-example
+* entry[mrs][1].fullUrl = "http://vgh-stroke-ig.fhir.tw/Observation/stroke-mrs-case-management-example"
+* entry[mrs][1].resource = stroke-mrs-case-management-example
 * entry[gcs][0].fullUrl = "http://vgh-stroke-ig.fhir.tw/Observation/stroke-gcs-example"
 * entry[gcs][0].resource = stroke-gcs-example
 

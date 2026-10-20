@@ -28,7 +28,7 @@
 | [血壓](StructureDefinition-StrokeBloodPressure.html) | [腦中風血壓範例](Observation-stroke-blood-pressure-example.html)<br>[腦中風血壓範例（缺舒張壓）](Observation-stroke-blood-pressure-diastolic-missing-example.html) |
 | [昏迷指數](StructureDefinition-StrokeGCS.html) | [腦中風昏迷指數範例](Observation-stroke-gcs-example.html) |
 | [NIHSS 評估](StructureDefinition-StrokeNIHSS.html) | [腦中風 NIHSS 入院評估範例](Observation-stroke-nihss-admission-example.html)<br>[腦中風 NIHSS 治療後 24 小時評估範例](Observation-stroke-nihss-24h-example.html) |
-| [mRS 評估](StructureDefinition-StrokeMRS.html) | [腦中風離院 mRS 評估範例](Observation-stroke-mrs-discharge-example.html)<br>[腦中風中風前 mRS 範例](Observation-stroke-mrs-pre-stroke-example.html)<br>[腦中風未分類時點 mRS 範例](Observation-stroke-mrs-unclassified-example.html) |
+| [mRS 評估](StructureDefinition-StrokeMRS.html) | [腦中風離院 mRS 評估範例](Observation-stroke-mrs-discharge-example.html)<br>[腦中風中風前 mRS 範例](Observation-stroke-mrs-pre-stroke-example.html)<br>[腦中風個管系統 mRS 評估範例](Observation-stroke-mrs-case-management-example.html) |
 {: .grid .rwd-table}
 
 #### 三、中風評估

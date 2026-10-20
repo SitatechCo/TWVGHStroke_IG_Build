@@ -5,15 +5,12 @@ Title: "腦中風－NIHSS 評估"
 Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現美國國衛院中風量表（NIHSS）的評估結果，包含總分與 15 個分項分數。"
 * ^status = #draft
 * ^experimental = false
-* ^purpose = "每次 NIHSS 評估建立一筆 Observation。入院、施針前、治療後 24 小時與出院四個時點各建一筆，以 assessmentPhase 區分。同次評估的日期、時間、分項與總分放在同一筆。分項與日期時間皆空白、只有總分 0 時不建 Observation，原值存於登錄表單（StrokeRegistryResponse），確認有評估後再建立。"
+* ^purpose = "每次 NIHSS 評估建立一筆 Observation，每一筆評估原樣保留。EVT 登錄的入院、施針前、治療後 24 小時評估各建一筆，以 assessmentPhase 區分；個管系統的評估不區分次數或時點，不填 assessmentPhase，以評估日期（effectiveDateTime）與就醫事件（encounter）的入院、離院日期辨識。同次評估的日期、時間、分項與總分放在同一筆。分項與日期時間皆空白、只有總分 0 時不建 Observation，原值存於登錄表單（StrokeRegistryResponse），確認有評估後再建立。"
 
 * extension contains
-    StrokeAssessmentPhase named assessmentPhase 1..1 MS and
-    StrokeAssessmentSequence named assessmentSequence 0..1 MS
-* extension[assessmentPhase] ^short = "評估時點。[應填入 admission／pre-needle／24h／discharge；無法確認時填 unclassified]"
-* extension[assessmentPhase] ^definition = "必填。入院填 admission，施針前填 pre-needle，治療後 24 小時填 24h，出院填 discharge；四個時點各建一筆 Observation。時點無法確認時填 unclassified。"
-* extension[assessmentSequence] ^short = "來源評估序號。[有序號時原樣填入]"
-* extension[assessmentSequence] ^definition = "來源有序號時原樣填入。序號 1 為入院、2 為出院，assessmentPhase 分別填 admission 與 discharge，兩者各建一筆。來源無序號時不填。"
+    StrokeAssessmentPhase named assessmentPhase 0..1 MS
+* extension[assessmentPhase] ^short = "評估時點。[EVT 登錄填 admission／pre-needle／24h；個管系統不填]"
+* extension[assessmentPhase] ^definition = "來源本身已標明評估時點時填寫：EVT 登錄的最初進院填 admission，施針前填 pre-needle，治療後 24 小時填 24h，各建一筆 Observation。個管系統的評估沒有時點資訊，不填本擴充。時點資訊存在但無法歸類時填 unclassified。"
 
 * status MS
 * status ^short = "結果狀態。[填 final／amended／unknown 等]"
@@ -35,7 +32,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * encounter MS
 * encounter only Reference(StrokeEncounter)
 * encounter ^short = "就醫事件。[應參照 StrokeEncounter]"
-* encounter ^definition = "此次評估對應的就醫事件。"
+* encounter ^definition = "此次評估對應的就醫事件。個管系統每筆評估附帶的入院日期與離院日期，填在所參照 StrokeEncounter 的 period.start 與 period.end，不另存於本 Observation。"
 
 * effective[x] MS
 * effective[x] only dateTime

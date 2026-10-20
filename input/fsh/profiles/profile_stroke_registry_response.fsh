@@ -19,9 +19,9 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
 
 // 表單
 * questionnaire MS
-* questionnaire = "http://vgh-stroke-ig.fhir.tw/Questionnaire/stroke-registry|0.1.0" (exactly)
-* questionnaire ^short = "所回答的表單。[固定為 stroke-registry 表單 0.1.0 版]"
-* questionnaire ^definition = "所有來源都使用同一份表單，固定填入 http://vgh-stroke-ig.fhir.tw/Questionnaire/stroke-registry|0.1.0。"
+* questionnaire = "http://vgh-stroke-ig.fhir.tw/Questionnaire/stroke-registry|1.0.0" (exactly)
+* questionnaire ^short = "所回答的表單。[固定為 stroke-registry 表單 1.0.0 版]"
+* questionnaire ^definition = "所有來源都使用同一份表單，固定填入 http://vgh-stroke-ig.fhir.tw/Questionnaire/stroke-registry|1.0.0。"
 
 * status MS
 * status ^short = "表單狀態。[應填入 in-progress 或 completed]"
@@ -73,8 +73,6 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
     followUpVisitHospital 0..1 MS and
     recurrentStrokeHospital 0..1 MS and
     unresolvedComaScaleCol19 0..1 MS and
-    unresolvedMrsCol06 0..1 MS and
-    unresolvedMrsCol07 0..1 MS and
     rawNcva 0..1 MS and
     rawEvt 0..1 MS and
     rawRapid 0..1 MS
@@ -199,28 +197,6 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Questionna
 * item[unresolvedComaScaleCol19].answer.value[x] only string
 * item[unresolvedComaScaleCol19].answer.value[x] ^short = "原始值。[原樣填入]"
 * item[unresolvedComaScaleCol19].answer.value[x] ^definition = "完整填入原始字串。來源空白請省略本題。"
-
-* item[unresolvedMrsCol06] ^short = "mRS 評估的額外欄位（第 6 欄）。[適用個管系統]"
-* item[unresolvedMrsCol06] ^definition = "個管系統 mRS 評估資料中，實際檔案比譯碼簿多出的第一欄。單一個管事件可有多筆 mRS 評估，每筆非空白值各填一個 answer；各值對應哪一筆評估，以原始值群組 raw.ncva.mrs 為準。"
-* item[unresolvedMrsCol06].linkId = "unresolved.NCVA.mRS.UNNAMED_COL_06" (exactly)
-* item[unresolvedMrsCol06].item 0..0
-* item[unresolvedMrsCol06].answer 1..* MS
-* item[unresolvedMrsCol06].answer.item 0..0
-* item[unresolvedMrsCol06].answer.value[x] 1..1 MS
-* item[unresolvedMrsCol06].answer.value[x] only string
-* item[unresolvedMrsCol06].answer.value[x] ^short = "原始值。[原樣填入]"
-* item[unresolvedMrsCol06].answer.value[x] ^definition = "完整填入原始字串，空白值不填。"
-
-* item[unresolvedMrsCol07] ^short = "mRS 評估的額外欄位（第 7 欄）。[適用個管系統]"
-* item[unresolvedMrsCol07] ^definition = "個管系統 mRS 評估資料中，實際檔案比譯碼簿多出的第二欄。單一個管事件可有多筆 mRS 評估，每筆非空白值各填一個 answer；各值對應哪一筆評估，以原始值群組 raw.ncva.mrs 為準。"
-* item[unresolvedMrsCol07].linkId = "unresolved.NCVA.mRS.UNNAMED_COL_07" (exactly)
-* item[unresolvedMrsCol07].item 0..0
-* item[unresolvedMrsCol07].answer 1..* MS
-* item[unresolvedMrsCol07].answer.item 0..0
-* item[unresolvedMrsCol07].answer.value[x] 1..1 MS
-* item[unresolvedMrsCol07].answer.value[x] only string
-* item[unresolvedMrsCol07].answer.value[x] ^short = "原始值。[原樣填入]"
-* item[unresolvedMrsCol07].answer.value[x] ^definition = "完整填入原始字串，空白值不填。"
 
 // 原始值群組
 * item[rawNcva] ^short = "個管系統原始值。[linkId 固定為 raw.ncva]"

@@ -1,7 +1,7 @@
 {
   "package-id" : "tw.vgh.stroke",
-  "version" : "0.1.0",
-  "path" : "http://vgh-stroke-ig.fhir.tw/0.1.0",
+  "version" : "1.0.0",
+  "path" : "http://vgh-stroke-ig.fhir.tw/1.0.0",
   "mode" : "milestone",
   "status" : "draft",
   "sequence" : "Releases",

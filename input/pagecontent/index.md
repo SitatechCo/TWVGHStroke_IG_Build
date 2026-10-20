@@ -2,10 +2,20 @@
 
 <div class="bg-warning" markdown="1">
 
-**0.1.0 初版**
+因考量實作需求，於 2026/10/21 異動以下內容：
+
+1. **異動原因**：個管系統（NCVA）的 NIHSS 與 mRS 資料實際評估時間不一定落在原先設定的區間內，難以用評估次數區分入院、出院或 3 個月追蹤。因此 NIHSS 與 mRS 兩張資料表不再使用評估次數，只保留評估日期、入院日期與離院日期，每一筆評估資料原樣保留。其他資料表沒有異動。
+2. **修改邏輯模型**：[個管系統邏輯模型](StructureDefinition-StrokeCaseManagementLM.html)的 NIHSS 與 mRS 區塊移除「評估次數」元素；mRS 區塊原本的兩個未命名欄位確認為「入院日期」與「離院日期」，對應至就醫事件（StrokeEncounter）的 period.start 與 period.end。
+3. **修改 Profiles**：[NIHSS 評估](StructureDefinition-StrokeNIHSS.html)與 [mRS 評估](StructureDefinition-StrokeMRS.html)的評估時點（assessmentPhase）由必填改為選填；EVT 登錄來源照填，個管系統來源不填。
+4. **移除 Extension**：移除「評估序號」（StrokeAssessmentSequence）Extension，兩個 Profile 不再引用。
+5. **修改登錄表單**：[腦中風登錄表單](Questionnaire-stroke-registry.html)與[登錄表單回覆](StructureDefinition-StrokeRegistryResponse.html)移除 NIHSS、mRS 的「評估次數」題目與 mRS 未命名欄位題目，原始值群組改為「入院日期」與「離院日期」。
+
+請留意這些異動，以避免影響您的實作。
+
+**1.0.0 初版**
 
 1. **[邏輯模型](logical-models.html)**：依腦中風資料庫三個資料來源的譯碼簿與實際檔案，建立個管系統、EVT 登錄及 RAPID 影像分析三個邏輯模型，並提供原始欄位與 FHIR 路徑對照。
-2. **[FHIR Profiles 及 Extensions](profiles-and-extensions.html)**：以 TW Core 1.0.0 為基礎，定義病人、就醫、生命徵象、NIHSS／mRS／GCS 量表、中風評估、EVT 處置、檢驗、用藥、處置、影像及登錄表單等 36 個 Profiles，三個資料來源各一個個案資料包 Bundle（共 39 個 Profiles），以及 4 個 Extensions。
+2. **[FHIR Profiles 及 Extensions](profiles-and-extensions.html)**：以 TW Core 1.0.0 為基礎，定義病人、就醫、生命徵象、NIHSS／mRS／GCS 量表、中風評估、EVT 處置、檢驗、用藥、處置、影像及登錄表單等 36 個 Profiles，三個資料來源各一個個案資料包 Bundle（共 39 個 Profiles），以及 3 個 Extensions。
 3. **[專門術語](terminologies.html)**：建立中風觀察項目、用藥、處置及各類答案代碼的 CodeSystems 與 ValueSets；量表與生命徵象採用 LOINC，處置附加 SNOMED CT。
 4. **[範例](examples.html)**：每個 Profile 皆提供範例。
 
@@ -67,7 +77,7 @@
 ### 作者與貢獻者
 
 <div style="padding-left: 10px;">
-<table class="grid rwd-table">
+<table class="grid rwd-table" style="width:100%;">
   <thead>
     <tr class="header">
       <th style="width:10%; vertical-align: middle;">角色</th>
@@ -80,21 +90,21 @@
   <tbody>
     <tr>
       <td style="vertical-align: middle;">作者</td>
-      <td style="vertical-align: middle;">0.1.0</td>
+      <td style="vertical-align: middle;">0.1.0～1.0.0</td>
       <td style="vertical-align: middle;">楊宇凡（Yu-Fan Yang）</td>
       <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />（Sitatech Information Services Co., Ltd）</td>
       <td style="vertical-align: middle;"><a href="mailto:ceo@sita.tech">ceo@sita.tech</a></td>
     </tr>
     <tr>
       <td style="vertical-align: middle;">貢獻者</td>
-      <td style="vertical-align: middle;">0.1.0</td>
+      <td style="vertical-align: middle;">0.1.0～1.0.0</td>
       <td style="vertical-align: middle;">陳靖勳（Jing-Shiun Chen）</td>
       <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />（Sitatech Information Services Co., Ltd）</td>
       <td style="vertical-align: middle;"><a href="mailto:pt@sita.tech">pt@sita.tech</a></td>
     </tr>
     <tr>
       <td style="vertical-align: middle;">貢獻者</td>
-      <td style="vertical-align: middle;">0.1.0</td>
+      <td style="vertical-align: middle;">0.1.0～1.0.0</td>
       <td style="vertical-align: middle;">張士宏（Shih-Hung Jhang）</td>
       <td style="vertical-align: middle;">矽塔資訊服務有限公司<br />（Sitatech Information Services Co., Ltd）</td>
       <td style="vertical-align: middle;"><a href="mailto:kevin0216@sita.tech">kevin0216@sita.tech</a></td>

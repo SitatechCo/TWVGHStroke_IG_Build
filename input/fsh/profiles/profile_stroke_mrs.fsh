@@ -5,16 +5,13 @@ Title: "腦中風－mRS 評估"
 Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource，以呈現修正版 Rankin 量表（mRS）的評估結果。"
 * ^status = #draft
 * ^experimental = false
-* ^purpose = "每次 mRS 評估建立一筆 Observation，同一次原始評估只建一筆；中風前 mRS 須與離院、3 個月追蹤分開建立，並以 assessmentPhase 標示中風前、離院、3 個月追蹤或尚未分類。若來源只有評估序號且意義尚未確認，assessmentPhase 請填 unclassified。"
+* ^purpose = "每次 mRS 評估建立一筆 Observation，每一筆評估原樣保留，同一次原始評估只建一筆。EVT 登錄的中風前、離院與 3 個月追蹤 mRS 分開建立，以 assessmentPhase 標示；個管系統的評估不區分次數或時點，不填 assessmentPhase，以評估日期（effectiveDateTime）與就醫事件（encounter）的入院、離院日期辨識。"
 * obeys stroke-mrs-pre-stroke-range
 
 * extension contains
-    StrokeAssessmentPhase named assessmentPhase 1..1 MS and
-    StrokeAssessmentSequence named assessmentSequence 0..1 MS
-* extension[assessmentPhase] ^short = "評估時點。[應填入 pre-stroke／discharge／3-month；無法確認時填 unclassified]"
-* extension[assessmentPhase] ^definition = "必填。中風前填 pre-stroke，離院填 discharge，3 個月追蹤填 3-month；來源資料本身就是離院或 3 個月追蹤的 mRS 時，才填 discharge 或 3-month。來源只有評估序號時，序號 1 至 9 的意義確認前填 unclassified。"
-* extension[assessmentSequence] ^short = "來源評估序號。[有序號時原樣填入]"
-* extension[assessmentSequence] ^definition = "來源有評估序號時原樣填入（例如 1 至 9），沒有序號則不填。"
+    StrokeAssessmentPhase named assessmentPhase 0..1 MS
+* extension[assessmentPhase] ^short = "評估時點。[EVT 登錄填 pre-stroke／discharge／3-month；個管系統不填]"
+* extension[assessmentPhase] ^definition = "來源本身已標明評估時點時填寫：EVT 登錄的中風前填 pre-stroke，離院填 discharge，3 個月追蹤填 3-month。個管系統的評估沒有時點資訊，不填本擴充。時點資訊存在但無法歸類時填 unclassified。"
 
 * status MS
 * status ^short = "結果狀態。[填 final／amended／unknown 等]"
@@ -36,7 +33,7 @@ Description: "此 Profile 說明本 IG 如何進一步定義 FHIR 的 Observatio
 * encounter MS
 * encounter only Reference(StrokeEncounter)
 * encounter ^short = "就醫事件。[應參照 StrokeEncounter]"
-* encounter ^definition = "填寫本次評估所屬的就醫事件。若 3 個月追蹤不屬於任何就醫事件，可不填。"
+* encounter ^definition = "填寫本次評估所屬的就醫事件。個管系統每筆評估附帶的入院日期與離院日期，填在所參照 StrokeEncounter 的 period.start 與 period.end，不另存於本 Observation。若 3 個月追蹤不屬於任何就醫事件，可不填。"
 
 * effective[x] MS
 * effective[x] only dateTime

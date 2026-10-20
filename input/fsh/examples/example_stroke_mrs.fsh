@@ -25,16 +25,15 @@ Usage: #example
 * encounter = Reference(Encounter/stroke-encounter-example)
 * valueInteger = 0
 
-Instance: stroke-mrs-unclassified-example
+Instance: stroke-mrs-case-management-example
 InstanceOf: StrokeMRS
-Title: "腦中風未分類時點 mRS 範例"
-Description: "來源只有評估序號 4 且意義未確認，評估時點填 unclassified，只保留序號。"
+Title: "腦中風個管系統 mRS 評估範例"
+Description: "個管系統的 mRS 評估不區分次數與時點，不填評估時點，每一筆評估原樣保留；入院與離院日期記錄在所參照的就醫事件。"
 Usage: #example
-* extension[assessmentPhase].valueCode = #unclassified
-* extension[assessmentSequence].valuePositiveInt = 4
 * status = #final
 * category[survey] = $ObsCategory#survey "Survey"
 * code = $LOINC#75859-9 "Modified rankin scale"
 * subject = Reference(Patient/stroke-patient-example)
-* effectiveDateTime = "2025-04-20"
+* encounter = Reference(Encounter/stroke-encounter-example)
+* effectiveDateTime = "2025-01-20"
 * valueInteger = 2

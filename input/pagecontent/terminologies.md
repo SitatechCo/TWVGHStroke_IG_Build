@@ -23,7 +23,7 @@
 | [觀察項目代碼](CodeSystem-stroke-observation.html) | [觀察項目值集](ValueSet-stroke-observation.html) | 供各 Observation Profile 的 code 使用。NIHSS、mRS、GCS 與生命徵象使用 LOINC，不收錄於此。 |
 | [藥品與藥物類別代碼](CodeSystem-stroke-medication.html) | [藥品與藥物類別值集](ValueSet-stroke-medication.html)<br>[NOAC 藥品值集](ValueSet-noac.html)<br>[抗凝血藥物類別值集](ValueSet-anticoagulant-detail.html) | 用藥紀錄與給藥紀錄的藥品、藥物類別與治療方式。NOAC 藥品值集列出住院前或離院時可記錄的 NOAC 品項；抗凝血藥物類別值集列出 EVT 後 24 小時內可記錄的抗凝血藥類別。 |
 | [醫療處置代碼](CodeSystem-stroke-procedure.html) | [醫療處置值集](ValueSet-stroke-procedure.html) | 醫療處置（StrokeProcedure）的處置代碼，包括 EVT 主處置與子術式、腦部手術及住院期間處置。 |
-| [評估時點代碼](CodeSystem-assessment-phase.html) | [評估時點值集](ValueSet-assessment-phase.html) | 評估時點 Extension 的值：入院、出院、施針前、治療後 24 小時、中風前、3 個月追蹤或尚未分類。 |
+| [評估時點代碼](CodeSystem-assessment-phase.html) | [評估時點值集](ValueSet-assessment-phase.html) | 評估時點 Extension 的值：入院、出院、施針前、治療後 24 小時、中風前、3 個月追蹤或尚未分類。只在來源已標明時點時使用。 |
 | [用藥紀錄時窗代碼](CodeSystem-medication-recording-context.html) | [用藥紀錄時窗值集](ValueSet-medication-recording-context.html) | 用藥紀錄時窗 Extension 的值：住院前、住院中、離院時或 EVT 後 24 小時內。 |
 {: .grid .rwd-table}
 

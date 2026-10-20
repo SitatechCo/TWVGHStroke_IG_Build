@@ -52,8 +52,8 @@ Profiles 以 [TW Core IG 1.0.0](https://twcore.mohw.gov.tw/ig/twcore/index.html)
 | 名稱 | Profile | 說明 |
 |---|---|---|
 | [昏迷指數](StructureDefinition-StrokeGCS.html) | StrokeGCS | 格拉斯哥昏迷指數（GCS）。睜眼、語言、動作三項以 component 記錄。 |
-| [NIHSS 評估](StructureDefinition-StrokeNIHSS.html) | StrokeNIHSS | 美國國衛院中風量表（NIHSS）總分與 15 個分項。每次評估建立一筆。 |
-| [mRS 評估](StructureDefinition-StrokeMRS.html) | StrokeMRS | 修正版 Rankin 量表（mRS）分數。中風前、離院與 3 個月追蹤各建立一筆。 |
+| [NIHSS 評估](StructureDefinition-StrokeNIHSS.html) | StrokeNIHSS | 美國國衛院中風量表（NIHSS）總分與 15 個分項。每次評估建立一筆，每一筆原樣保留；EVT 登錄以評估時點區分，個管系統不填評估時點。 |
+| [mRS 評估](StructureDefinition-StrokeMRS.html) | StrokeMRS | 修正版 Rankin 量表（mRS）分數。每次評估建立一筆，每一筆原樣保留；EVT 登錄的中風前、離院與 3 個月追蹤各建立一筆，個管系統不填評估時點。 |
 {: .grid .rwd-table}
 
 #### 三、中風評估
@@ -146,8 +146,7 @@ EVT 主處置與各子術式記錄在[醫療處置](StructureDefinition-StrokePr
 
 | 名稱 | Extension | 使用位置 | 說明 |
 |---|---|---|---|
-| [評估時點](StructureDefinition-assessment-phase.html) | StrokeAssessmentPhase | Observation | 評估所屬的臨床時點，例如入院、出院、施針前、治療後 24 小時、中風前或 3 個月追蹤。 |
-| [評估序號](StructureDefinition-assessment-sequence.html) | StrokeAssessmentSequence | Observation（NIHSS、mRS） | 來源記錄的評估序號。序號不代表臨床時點，臨床時點以評估時點記錄。 |
+| [評估時點](StructureDefinition-assessment-phase.html) | StrokeAssessmentPhase | Observation | 評估所屬的臨床時點，例如入院、出院、施針前、治療後 24 小時、中風前或 3 個月追蹤。只在來源已標明時點時使用。 |
 | [用藥紀錄時窗](StructureDefinition-medication-recording-context.html) | StrokeMedicationRecordingContext | MedicationStatement | 用藥紀錄所屬的時窗：住院前、住院中、離院時或 EVT 後 24 小時內。 |
 | [來源事件時間](StructureDefinition-event-time-only.html) | StrokeEventTimeOnly | Condition.onset[x]、Encounter.period.start、Encounter.period.end、Observation.value[x]、Observation.effective[x]、Procedure.performed[x]、MedicationAdministration.effective[x]、MedicationStatement.effective[x]、ImagingStudy.started、Provenance.occurred[x]、ServiceRequest.authoredOn、ServiceRequest.occurrence[x]、Consent.dateTime、QuestionnaireResponse.authored | 保留來源記錄的事件時間。用於兩種情況：來源只有時間、沒有日期；或來源時區尚待確認，原元素只填日期。 |
 {: .grid .rwd-table}
