@@ -2,7 +2,7 @@
 
 <div class="bg-warning" markdown="1">
 
-因考量實作需求，於 2026/10/21 異動以下內容：
+因考量實作需求，於 2026/10/16 異動以下內容：
 
 1. **異動原因**：個管系統（NCVA）的 NIHSS 與 mRS 資料實際評估時間不一定落在原先設定的區間內，難以用評估次數區分入院、出院或 3 個月追蹤。因此 NIHSS 與 mRS 兩張資料表不再使用評估次數，只保留評估日期、入院日期與離院日期，每一筆評估資料原樣保留。其他資料表沒有異動。
 2. **修改邏輯模型**：[個管系統邏輯模型](StructureDefinition-StrokeCaseManagementLM.html)的 NIHSS 與 mRS 區塊移除「評估次數」元素；mRS 區塊原本的兩個未命名欄位確認為「入院日期」與「離院日期」，對應至就醫事件（StrokeEncounter）的 period.start 與 period.end。
@@ -11,13 +11,6 @@
 5. **修改登錄表單**：[腦中風登錄表單](Questionnaire-stroke-registry.html)與[登錄表單回覆](StructureDefinition-StrokeRegistryResponse.html)移除 NIHSS、mRS 的「評估次數」題目與 mRS 未命名欄位題目，原始值群組改為「入院日期」與「離院日期」。
 
 請留意這些異動，以避免影響您的實作。
-
-**1.0.0 初版**
-
-1. **[邏輯模型](logical-models.html)**：依腦中風資料庫三個資料來源的譯碼簿與實際檔案，建立個管系統、EVT 登錄及 RAPID 影像分析三個邏輯模型，並提供原始欄位與 FHIR 路徑對照。
-2. **[FHIR Profiles 及 Extensions](profiles-and-extensions.html)**：以 TW Core 1.0.0 為基礎，定義病人、就醫、生命徵象、NIHSS／mRS／GCS 量表、中風評估、EVT 處置、檢驗、用藥、處置、影像及登錄表單等 36 個 Profiles，三個資料來源各一個個案資料包 Bundle（共 39 個 Profiles），以及 3 個 Extensions。
-3. **[專門術語](terminologies.html)**：建立中風觀察項目、用藥、處置及各類答案代碼的 CodeSystems 與 ValueSets；量表與生命徵象採用 LOINC，處置附加 SNOMED CT。
-4. **[範例](examples.html)**：每個 Profile 皆提供範例。
 
 本版使用 FHIR R4.0.1 與 TW Core IG 1.0.0。
 
